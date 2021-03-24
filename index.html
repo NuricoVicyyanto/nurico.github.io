@@ -9,11 +9,23 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        section {
+            height: 420px;
+        }
 
+        .icon a {
+            padding: 10px;
+        }
+
+        .icon{
+            padding-bottom: 20px;
+        }
+    </style>
     <title>MyProfile</title>
 </head>
 
-<body>
+<body class="mt-5">
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Nurico</a>
@@ -36,83 +48,142 @@
             </div>
         </div>
     </nav>
-    <br><br>
     <div class="jumbotron jumbotron-fluid">
         <div class="container text-center">
-            <img src="img/profile.png" width="300">
+            <img src="img/profile.png" width="25%" class="rounded-circle img-thumbnail">
             <h1 class="display-4">Nurico Vicyyanto</h1>
-            <p class="lead">Welcome to my website profile.</p>
+            <p class="lead">Welcome to my website profile, you can see about me on this site.</p>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h1>About</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt,
-                    debitis facilis numquam inventore amet eveniet accusamus perferendis officia?
-                    Neque, sequi eum? Enim dolore facilis adipisci. Maxime saepe aliquam cupiditate fugiat?</p>
-            </div>
-            <div class="col">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quae officiis illo autem veritatis aliquid, nostrum accusamus cumque in numquam,
-                    libero architecto! Veniam optio modi soluta ipsam explicabo. Nisi, quas molestias.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h1>Portofolio</h1>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md">
-                <div class="card">
-                    <img class="card-img-top" src="img/profile.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col text-center">
+                    <h1>About</h1>
                 </div>
             </div>
-            <div class="col-md">
-                <div class="card">
-                    <img class="card-img-top" src="img/profile.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-5 text-center">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt,
+                        debitis facilis numquam inventore amet eveniet accusamus perferendis officia?
+                        Neque, sequi eum? Enim dolore facilis adipisci. Maxime saepe aliquam cupiditate fugiat?</p>
                 </div>
-            </div>
-            <div class="col-md">
-                <div class="card">
-                    <img class="card-img-top" src="img/profile.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
+                <div class="col-md-5 text-center">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Quae officiis illo autem veritatis aliquid, nostrum accusamus cumque in numquam,
+                        libero architecto! Veniam optio modi soluta ipsam explicabo. Nisi, quas molestias.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+
+    <div class="portofolio bg-light">
+        <div class="container">
+            <div class="row mb-4 pt-4">
+                <div class="col text-center">
+                    <h1>Portofolio</h1>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md">
+                    <div class="card">
+                        <img class="card-img-top" src="img/logo.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card">
+                        <img class="card-img-top" src="img/logo.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card">
+                        <img class="card-img-top" src="img/logo.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md">
+                    <div class="card">
+                        <img class="card-img-top" src="img/logo.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card">
+                        <img class="card-img-top" src="img/logo.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card">
+                        <img class="card-img-top" src="img/logo.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="contact">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row pt-4 mb-4">
+                        <div class="col text-center">
+                            <h2>Contact Us</h2>
+                        </div>
+                    </div>
+                    <div class="icon text-center">
+                        <a href="whatsapp.com"><img src="img/whatsapp.png" width="3%"></a>
+                        <a href="whatsapp.com"><img src="img/gmail.png" width="3%"></a>
+                        <a href="whatsapp.com"><img src="img/github.png" width="3%"></a>
+                        <a href="whatsapp.com"><img src="img/telegram.png" width="3%"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center p-3" style="background-color: rgba(97, 93, 93, 0.2);">
+            © 2020 Copyright
+          </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
