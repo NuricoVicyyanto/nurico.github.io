@@ -14,88 +14,48 @@
         text-align: center;
       }
     </style>
+    <script>
+      function loadContent(page) {
+        // Fetch the content of the selected page
+        fetch(page)
+          .then((response) => response.text())
+          .then((content) => {
+            // Replace the content of the main section with the fetched content
+            document.getElementById("main-content").innerHTML = content;
+          });
+      }
+
+      window.addEventListener('load', function () {
+        loadContent('menu/home.html');
+      });
+    </script>
   </head>
   <body>
     <td colspan="3" width="1200" style="text-align: center">
       <nav>
-        <a href="index.htm">Home</a> | <a href="menu.htm">Biography</a> |
-        <a href="help.htm">Repository</a> |
-        <a href="order.htm">Documentation</a>|
-        <a href="order.htm">Programming</a>| <a href="order.htm">App</a>
+        <a href="javascript:void(0);" onclick="loadContent('menu/home.html')">Home</a> |
+        <a href="javascript:void(0);" onclick="loadContent('menu/biography.html')">Biography</a> |
+        <a href="javascript:void(0);" onclick="loadContent('menu/repo.html')">Repository</a> |
+        <a href="javascript:void(0);" onclick="loadContent('menu/doc.html')">Documentation</a> |
+        <a href="javascript:void(0);" onclick="loadContent('menu/programming.html')">Programming</a> |
+        <a href="javascript:void(0);" onclick="loadContent('menu/app.html')">App</a>
       </nav>
     </td>
 
-    <h1>Welcome to Nurico Vicyyanto's Homepage</h1>
-    <img
-      src="img/profile.jpeg"
-      alt="profile"
-      width="350"
-      height="500"
-      style="object-fit: cover; object-position: center; max-width: 100%"
-    />
-
-    <p style="text-align: left">
-      I am a software developer with a bachelor's degree in Applied Computer
-      Science from the State Polytechnic of Jember. My primary focus is on
-      software development and the implementation of artificial intelligence
-      solutions. I enjoy researching technology, and in addition, I am also
-      interested in philosophy.
-    </p>
-
-    <ul>
-      <li style="text-align: left">
-        <a href="guide.html" style="text-decoration: none"
-          >Software Development Guide</a
-        >
-        - A comprehensive guide covering the fundamentals of software
-        development.
-      </li>
-      <li style="text-align: left">
-        <a href="ai.html" style="text-decoration: none"
-          >Artificial Intelligence</a
-        >
-        - Explore innovation and get insights into the world of Artificial
-        Intelligence with our comprehensive guide.
-      </li>
-      <li style="text-align: left">
-        <a href="project.html" style="text-decoration: none">Project</a> - Dive
-        into details about our latest software project, including its features
-        and functionalities.
-      </li>
-      <li style="text-align: left">
-        <a href="research.html" style="text-decoration: none">Research</a> -
-        Delve into our research endeavors, focusing on the latest technological
-        advancements and trends.
-      </li>
-      <li style="text-align: left">
-        <a href="iot.html" style="text-decoration: none">IOT Project</a> - Learn
-        about our Internet of Things project, exploring the integration of
-        devices for a smarter and connected environment.
-      </li>
-      <li style="text-align: left">
-        <a href="videos.html" style="text-decoration: none">Videos</a> - Enjoy
-        and explore our video content, covering a wide range of topics related
-        to technology and development.
-      </li>
-      <li style="text-align: left">
-        <a href="galery.html" style="text-decoration: none">Gallery</a> - View
-        our gallery showcasing visuals and images related to our projects and
-        achievements.
-      </li>
-      <li style="text-align: left">
-        <a href="bio.html" style="text-decoration: none">Biography</a> -
-        Discover the history and background of our organization, providing
-        insights into our journey and milestones.
-      </li>
-    </ul>
+    <div id="main-content">
+      <!-- The loaded content will be displayed here -->
+    </div>
 
     <td colspan="3" width="1200" style="text-align: center">
       <nav>
-        <a href="index.htm">Home</a> | <a href="menu.htm">Biography</a> |
-        <a href="help.htm">Repository</a> |
-        <a href="order.htm">Documentation</a>|
-        <a href="order.htm">Programming</a>| <a href="order.htm">App</a>
+        <a href="javascript:void(0);" onclick="loadContent('menu/home.html')">Home</a> |
+        <a href="javascript:void(0);" onclick="loadContent('menu/bio.html')">Biography</a> |
+        <a href="javascript:void(0);" onclick="loadContent('menu/repo.html')">Repository</a> |
+        <a href="javascript:void(0);" onclick="loadContent('menu/doc.html')">Documentation</a> |
+        <a href="javascript:void(0);" onclick="loadContent('menu/programming.html')">Programming</a> |
+        <a href="javascript:void(0);" onclick="loadContent('menu/app.html')">App</a>
       </nav>
     </td>
+  </body>
   </body>
 </html>
