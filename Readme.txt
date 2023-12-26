@@ -1,6 +1,12 @@
-Thanks for downloading this template!
+# Potofolio APP - Persona web portofolio
 
-Template Name: MyResume
-Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Welcome to my Web Portfolio repository! This repository was created to showcase and share my projects and experiences through a web platform.
+## Tech Stack
+
+**Client:** HTML, CSS, Javascript
+
+
+## Authors
+
+- [@nuricovicyyanto](https://github.com/NuricoVicyyanto)
+
