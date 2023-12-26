@@ -1,4 +1,4 @@
-# Potofolio APP - Persona web portofolio
+# Potofolio APP - Personal web portofolio
 
 Welcome to my Web Portfolio repository! This repository was created to showcase and share my projects and experiences through a web platform.
 ## Tech Stack
