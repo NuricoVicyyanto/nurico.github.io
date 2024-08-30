@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playground</title>
+    <title>JavaScript Playground</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        .editor {
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            font-family: "Courier New", Courier, monospace;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+        }
+        .output {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <p>under development.</p>
+
+    <h1>JavaScript Playground</h1>
+    
+    <div class="editor">
+        <h2>Write Your JavaScript Code</h2>
+        <textarea id="jsCode" placeholder="Write JavaScript code here..."></textarea>
+        <button onclick="runJavaScript()">Run JavaScript Code</button>
+    </div>
+
+    <div class="output" id="jsOutput">
+        <h2>Output</h2>
+        <pre id="outputContent"></pre>
+    </div>
+
+    <script>
+        function runJavaScript() {
+            const jsCode = document.getElementById('jsCode').value;
+            const outputElement = document.getElementById('outputContent');
+            
+            try {
+                // Create a new function to execute the user's code
+                const result = new Function(jsCode)();
+                outputElement.textContent = result === undefined ? "No output or the function does not return a value." : result;
+            } catch (error) {
+                outputElement.textContent = "Error: " + error.message;
+            }
+        }
+    </script>
+
 </body>
 </html>

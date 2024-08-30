@@ -1,63 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vici</title>
-    <link href="img/loogos.png" rel="icon" />
-    <style>
-      body {
-        text-align: center;
-      }
 
-      td {
-        text-align: center;
-      }
-    </style>
-    <script>
-      function loadContent(page) {
-        // Fetch the content of the selected page
-        fetch(page)
-          .then((response) => response.text())
-          .then((content) => {
-            // Replace the content of the main section with the fetched content
-            document.getElementById("main-content").innerHTML = content;
-          });
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vici</title>
+  <link href="img/loogos.png" rel="icon" />
+  <style>
+    body {
+      text-align: center;
+    }
 
-      window.addEventListener('load', function () {
-        loadContent('menu/home.html');
-      });
-    </script>
-  </head>
-  <body>
-    <td colspan="3" width="1200" style="text-align: center">
-      <nav>
-        <a href="javascript:void(0);" onclick="loadContent('menu/home.html')">Home</a> |
-        <a href="javascript:void(0);" onclick="loadContent('menu/biography.html')">Biography</a> |
-        <a href="javascript:void(0);" onclick="loadContent('menu/repo.html')">Repository</a> |
-        <a href="javascript:void(0);" onclick="loadContent('menu/doc.html')">Documentation</a> |
-        <a href="javascript:void(0);" onclick="loadContent('menu/programming.html')">Programming</a> |
-        <a href="javascript:void(0);" onclick="loadContent('menu/app.html')">App</a> |
-        <a href="javascript:void(0);" onclick="loadContent('menu/playground.html')">Playground</a>
-      </nav>
-    </td>
+    td {
+      text-align: center;
+    }
 
-    <div id="main-content">
-      <!-- The loaded content will be displayed here -->
-    </div>
 
-    <td colspan="3" width="1200" style="text-align: center">
-      <nav>
-        <a href="javascript:void(0);" onclick="loadContent('menu/home.html')">Home</a> |
-        <a href="javascript:void(0);" onclick="loadContent('menu/biography.html')">Biography</a> |
-        <a href="javascript:void(0);" onclick="loadContent('menu/repo.html')">Repository</a> |
-        <a href="javascript:void(0);" onclick="loadContent('menu/doc.html')">Documentation</a> |
-        <a href="javascript:void(0);" onclick="loadContent('menu/programming.html')">Programming</a> |
-        <a href="javascript:void(0);" onclick="loadContent('menu/app.html')">App</a> |
-        <a href="javascript:void(0);" onclick="loadContent('menu/playground.html')">Playground</a>
-      </nav>
-    </td>
-  </body>
-  </body>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #007BFF;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+  </style>
+  <script>
+    function loadContent(page) {
+      // Fetch the content of the selected page
+      fetch(page)
+        .then((response) => response.text())
+        .then((content) => {
+          // Replace the content of the main section with the fetched content
+          document.getElementById("main-content").innerHTML = content;
+        });
+    }
+
+    window.addEventListener('load', function () {
+      loadContent('menu/home.html');
+    });
+  </script>
+</head>
+
+<body>
+  <td colspan="3" width="1200" style="text-align: center">
+    <nav>
+      <a href="javascript:void(0);" onclick="loadContent('menu/home.html')">Home</a> |
+      <a href="javascript:void(0);" onclick="loadContent('menu/biography.html')">Biography</a> |
+      <a href="javascript:void(0);" onclick="loadContent('menu/repo.html')">Repository</a> |
+      <a href="javascript:void(0);" onclick="loadContent('menu/doc.html')">Documentation</a> |
+      <a href="javascript:void(0);" onclick="loadContent('menu/programming.html')">Programming</a> |
+      <a href="javascript:void(0);" onclick="loadContent('menu/app.html')">App</a> |
+      <a href="javascript:void(0);" onclick="loadContent('menu/playground.html')">Playground</a>
+    </nav>
+  </td>
+
+  <div id="main-content">
+    <!-- The loaded content will be displayed here -->
+  </div>
+
+  <td colspan="3" width="1200" style="text-align: center">
+    <nav>
+      <a href="javascript:void(0);" onclick="loadContent('menu/home.html')">Home</a> |
+      <a href="javascript:void(0);" onclick="loadContent('menu/biography.html')">Biography</a> |
+      <a href="javascript:void(0);" onclick="loadContent('menu/repo.html')">Repository</a> |
+      <a href="javascript:void(0);" onclick="loadContent('menu/doc.html')">Documentation</a> |
+      <a href="javascript:void(0);" onclick="loadContent('menu/programming.html')">Programming</a> |
+      <a href="javascript:void(0);" onclick="loadContent('menu/app.html')">App</a> |
+      <a href="javascript:void(0);" onclick="loadContent('menu/playground.html')">Playground</a>
+    </nav>
+  </td>
+</body>
+</body>
+
 </html>
