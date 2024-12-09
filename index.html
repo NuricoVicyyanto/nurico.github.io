@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Programmer Profesional</title>
+    <title>Nurico Vicyyanto</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
@@ -16,14 +16,14 @@
     <!-- Navigasi -->
     <nav class="bg-white shadow-md fixed w-full z-20 top-0">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="text-2xl font-bold text-blue-600">&lt;DevName /&gt;</div>
+            <div class="text-2xl font-bold text-blue-600">&lt;NuricoVicyyanto /&gt;</div>
             <div class="hidden md:flex space-x-6">
-                <a href="#home" class="hover:text-blue-600 transition">Beranda</a>
-                <a href="#about" class="hover:text-blue-600 transition">Tentang</a>
-                <a href="#skills" class="hover:text-blue-600 transition">Keahlian</a>
-                <a href="#projects" class="hover:text-blue-600 transition">Proyek</a>
-                <a href="#experience" class="hover:text-blue-600 transition">Pengalaman</a>
-                <a href="#contact" class="hover:text-blue-600 transition">Kontak</a>
+                <a href="#home" class="hover:text-blue-600 transition">Home</a>
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>                
             </div>
             <div class="md:hidden">
                 <button class="mobile-menu-button">
@@ -38,32 +38,32 @@
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
             <div class="space-y-6">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-900">
-                    Nama Lengkap Developer
+                    Nurico Vicyyanto
                 </h1>
                 <p class="text-xl text-gray-600">
-                    Full Stack Developer | Spesialis Pengembangan Aplikasi Web & Mobile
+                    Full Stack Developer | Specialist in Web & Mobile Application Development, AI Developer, Project Manager, and Writer.
                 </p>
                 
                 <!-- Tombol Aksi -->
                 <div class="flex space-x-4">
                     <a href="#contact" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                        Hubungi Saya
+                        Contact Me
                     </a>
                     <a href="#projects" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition">
-                        Lihat Proyek
+                        View Projects
                     </a>
-                </div>
+                </div>                
 
                 <!-- Sosial Media -->
                 <div class="flex space-x-4 pt-4">
-                    <a href="#" class="text-gray-700 hover:text-blue-600">
+                    <a href="https://github.com/NuricoVicyyanto" class="text-gray-700 hover:text-blue-600">
                         <i class="fab fa-github text-2xl"></i>
                     </a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600">
+                    <a href="https://www.linkedin.com/in/nurico-vicyyanto/" class="text-gray-700 hover:text-blue-600">
                         <i class="fab fa-linkedin text-2xl"></i>
                     </a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600">
-                        <i class="fab fa-twitter text-2xl"></i>
+                    <a href="https://nuricovic.medium.com" class="text-gray-700 hover:text-blue-600">
+                        <i class="fab fa-medium text-2xl"></i>
                     </a>
                 </div>
             </div>
@@ -71,7 +71,7 @@
             <!-- Gambar Profil -->
             <div class="hidden md:block text-center">
                 <img 
-                    src="/api/placeholder/500/500" 
+                    src="/img/profile.jpeg" 
                     alt="Programmer Profile" 
                     class="rounded-full shadow-lg mx-auto w-80 h-80 object-cover"
                 />
@@ -82,36 +82,46 @@
     <!-- Tentang Saya Section -->
     <section id="about" class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Tentang Saya</h2>
+            <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                     <p class="text-gray-600 mb-4">
-                        Saya seorang pengembang perangkat lunak berpengalaman dengan passion dalam menciptakan solusi teknologi inovatif. 
-                        Dengan lebih dari [X] tahun pengalaman, saya telah membantu berbagai perusahaan mengembangkan aplikasi berkualitas tinggi.
+                        I am an experienced software developer with a passion for creating innovative technological solutions. 
+                        With over <span id="experience-years"></span> years of experience, I have helped various companies develop high-quality applications.
                     </p>
                     <p class="text-gray-600">
-                        Saya percaya dalam menulis kode yang bersih, efisien, dan mudah dipelihara. 
-                        Selalu antusias untuk belajar teknologi baru dan menghadapi tantangan pengembangan yang kompleks.
+                        I believe in writing clean, efficient, and maintainable code. 
+                        Always enthusiastic about learning new technologies and tackling complex development challenges.
                     </p>
                 </div>
                 <div class="bg-gray-100 p-6 rounded-lg">
-                    <h3 class="text-xl font-bold mb-4">Detail Pribadi</h3>
+                    <h3 class="text-xl font-bold mb-4">Personal Details</h3>
                     <ul class="space-y-2">
-                        <li><strong>Nama:</strong> Nama Lengkap Anda</li>
-                        <li><strong>Umur:</strong> [Umur] Tahun</li>
-                        <li><strong>Lokasi:</strong> Kota, Negara</li>
-                        <li><strong>Email:</strong> email@anda.com</li>
-                        <li><strong>Bahasa:</strong> Indonesia, Inggris</li>
+                        <li><strong>Name:</strong> Nurico Vicyyanto</li>
+                        <li><strong>Location:</strong> Bali, Indonesia</li>
+                        <li><strong>Email:</strong> nuricov.dev@gmail.com</li>
+                        <li><strong>Languages:</strong> Indonesian, English</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+    
+    <script>
+        // Calculate years of experience from 2020
+        const startYear = 2020;
+        const currentYear = new Date().getFullYear();
+        const experienceYears = currentYear - startYear;
+    
+        // Insert years of experience into the HTML
+        document.getElementById('experience-years').textContent = experienceYears;
+    </script>
+    
 
     <!-- Keahlian Section -->
     <section id="skills" class="py-16 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Keahlian Teknis</h2>
+            <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-white p-6 rounded-lg text-center shadow-md">
                     <i class="fab fa-python text-4xl text-blue-600 mb-4"></i>
@@ -131,121 +141,134 @@
             </div>
         </div>
     </section>
+    
 
     <!-- Proyek Section -->
     <section id="projects" class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Proyek Terbaru</h2>
+            <h2 class="text-3xl font-bold text-center mb-12">Recent Projects</h2>
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-gray-100 p-6 rounded-lg">
-                    <img src="/api/placeholder/400/250" alt="Proyek 1" class="rounded-lg mb-4">
-                    <h3 class="font-bold text-xl mb-2">Nama Proyek 1</h3>
-                    <p class="text-gray-600 mb-4">Deskripsi singkat proyek yang dikembangkan</p>
-                    <div class="flex space-x-2">
-                        <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                <div class="bg-gray-100 p-6 rounded-lg text-center">
+                    <i class="fas fa-car text-6xl text-blue-600 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Jayamahe EasyRide</h3>
+                    <p class="text-gray-600 mb-4">
+                        A car rental application providing an easy and affordable experience.
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <a href="https://sewamobilmurah.com/" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
                             Demo
-                        </a>
-                        <a href="#" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">
-                            Kode
                         </a>
                     </div>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg">
-                    <img src="/api/placeholder/400/250" alt="Proyek 2" class="rounded-lg mb-4">
-                    <h3 class="font-bold text-xl mb-2">Nama Proyek 2</h3>
-                    <p class="text-gray-600 mb-4">Deskripsi singkat proyek yang dikembangkan</p>
-                    <div class="flex space-x-2">
-                        <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-                            Demo
-                        </a>
-                        <a href="#" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">
-                            Kode
+                <div class="bg-gray-100 p-6 rounded-lg text-center">
+                    <i class="fas fa-database text-6xl text-blue-600 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">VHub</h3>
+                    <p class="text-gray-600 mb-4">
+                        An open-source web platform for sharing and managing datasets efficiently.
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <a href="https://github.com/NuricoVicyyanto/vhub-laravel" target="_blank" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">
+                            Source Code
                         </a>
                     </div>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg">
-                    <img src="/api/placeholder/400/250" alt="Proyek 3" class="rounded-lg mb-4">
-                    <h3 class="font-bold text-xl mb-2">Nama Proyek 3</h3>
-                    <p class="text-gray-600 mb-4">Deskripsi singkat proyek yang dikembangkan</p>
-                    <div class="flex space-x-2">
-                        <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                <div class="bg-gray-100 p-6 rounded-lg text-center">
+                    <i class="fas fa-user-tie text-6xl text-blue-600 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">GoCar Driver Registration</h3>
+                    <p class="text-gray-600 mb-4">
+                        A landing page for driver registration, built for GoCar Jayamahe.
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <a href="https://gocar.jayamaheeasyride.com/" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
                             Demo
-                        </a>
-                        <a href="#" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">
-                            Kode
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Pengalaman Kerja Section -->
     <section id="experience" class="py-16 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Pengalaman Kerja</h2>
+            <h2 class="text-3xl font-bold text-center mb-12">Work Experience</h2>
             <div class="space-y-6">
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-xl font-bold">Senior Software Developer</h3>
-                        <span class="text-gray-600">2020 - Sekarang</span>
+                        <h3 class="text-xl font-bold">IT Lead</h3>
+                        <span class="text-gray-600">2023 - Present</span>
                     </div>
-                    <p class="text-gray-600">Nama Perusahaan</p>
+                    <p class="text-gray-600">PT Dwi Sarana Mesari</p>
                     <ul class="list-disc list-inside text-gray-600 mt-2">
-                        <li>Mengembangkan aplikasi web skala enterprise</li>
-                        <li>Merancang arsitektur microservices</li>
-                        <li>Memimpin tim pengembangan software</li>
+                        <li>Leading software development teams</li>
+                        <li>Managing application maintenance and infrastructure</li>
+                        <li>Designing systems architecture from scratch</li>
                     </ul>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-xl font-bold">Software Engineer</h3>
-                        <span class="text-gray-600">2017 - 2020</span>
+                        <h3 class="text-xl font-bold">Web Developer</h3>
+                        <span class="text-gray-600">2023</span>
                     </div>
-                    <p class="text-gray-600">Nama Perusahaan Sebelumnya</p>
+                    <p class="text-gray-600">PT Dwi Sarana Mesari</p>
                     <ul class="list-disc list-inside text-gray-600 mt-2">
-                        <li>Mengembangkan produk digital</li>
-                        <li>Berkolaborasi dengan tim desain</li>
-                        <li>Mengoptimalkan performa aplikasi</li>
+                        <li>Developing web applications using PHP, Laravel, React, and other modern technologies</li>
+                        <li>Collaborating with designers and developers to create high-quality products</li>
+                        <li>Implementing and maintaining new features and functionality</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold">Freelance Programmer</h3>
+                        <span class="text-gray-600">2020 - Present</span>
+                    </div>
+                    <p class="text-gray-600">Freelance</p>
+                    <ul class="list-disc list-inside text-gray-600 mt-2">
+                        <li>Providing software development services for various clients</li>
+                        <li>Specializing in web and mobile applications</li>
+                        <li>Helping businesses automate processes and improve efficiency through custom solutions</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Kontak Section -->
     <section id="contact" class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Hubungi Saya</h2>
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Me</h2>
             <form class="max-w-lg mx-auto bg-gray-100 p-8 rounded-lg shadow-md">
                 <div class="mb-4">
-                    <label class="block text-gray-700 mb-2">Nama</label>
-                    <input type="text" class="w-full px-3 py-2 border rounded-lg" placeholder="Nama Anda">
+                    <label class="block text-gray-700 mb-2">Name</label>
+                    <input type="text" class="w-full px-3 py-2 border rounded-lg" placeholder="Your Name">
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 mb-2">Email</label>
-                    <input type="email" class="w-full px-3 py-2 border rounded-lg" placeholder="email@anda.com">
+                    <input type="email" class="w-full px-3 py-2 border rounded-lg" placeholder="youremail@example.com">
                 </div>
                 <div class="mb-4">
-                    <label class="block text-gray-700 mb-2">Pesan</label>
-                    <textarea class="w-full px-3 py-2 border rounded-lg" rows="4" placeholder="Tulis pesan Anda"></textarea>
+                    <label class="block text-gray-700 mb-2">Message</label>
+                    <textarea class="w-full px-3 py-2 border rounded-lg" rows="4" placeholder="Write your message"></textarea>
                 </div>
                 <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
-                    Kirim Pesan
+                    Send Message
                 </button>
             </form>
         </div>
     </section>
+    
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <div class="flex justify-center space-x-4 mb-4">
-                <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-github"></i></a>
-                <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/NuricoVicyyanto" class="text-gray-300 hover:text-white"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nurico-vicyyanto/" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                <a href="nuricovic.medium.com" class="text-gray-300 hover:text-white"><i class="fab fa-medium"></i></a>
             </div>
-            <p>&copy; 2024 Nama Anda. All Rights Reserved.</p>
+            <p>&copy; 2024 Nuricov. All Rights Reserved.</p>
         </div>
     </footer>
 
