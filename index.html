@@ -294,175 +294,6 @@
         margin-bottom: 30px;
       }
 
-      /* Success Modal Styles */
-      .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        animation: fadeIn 0.3s ease-out;
-        padding: 20px;
-      }
-
-      .modal-content {
-        background: white;
-        padding: 40px;
-        border-radius: 12px;
-        max-width: 500px;
-        width: 100%;
-        text-align: center;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        animation: slideUp 0.4s ease-out;
-      }
-
-      .success-icon {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto 20px;
-        background: #00594f;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        animation: scaleIn 0.5s ease-out 0.2s both;
-      }
-
-      .success-icon svg {
-        width: 40px;
-        height: 40px;
-        stroke: white;
-        stroke-width: 3;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        fill: none;
-        animation: checkDraw 0.6s ease-out 0.4s both;
-      }
-
-      .modal-content h3 {
-        font-size: 1.8rem;
-        color: #00594f;
-        margin-bottom: 15px;
-        font-weight: 600;
-      }
-
-      .modal-content p {
-        font-size: 1.05rem;
-        color: #666;
-        line-height: 1.6;
-        margin-bottom: 30px;
-      }
-
-      .modal-close-btn {
-        padding: 14px 40px;
-        background: #00594f;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        font-size: 1rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s;
-      }
-
-      .modal-close-btn:hover {
-        background: #004239;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 89, 79, 0.3);
-      }
-
-      /* Alert Message Styles */
-      .alert-message {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        padding: 16px 24px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        z-index: 1001;
-        animation: slideInRight 0.4s ease-out;
-        max-width: 400px;
-      }
-
-      .alert-message.error {
-        border-left: 4px solid #dc3545;
-      }
-
-      .alert-message.warning {
-        border-left: 4px solid #ffc107;
-      }
-
-      .alert-icon {
-        width: 24px;
-        height: 24px;
-        flex-shrink: 0;
-      }
-
-      .alert-text {
-        color: #2c2c2c;
-        font-size: 0.95rem;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      @keyframes slideUp {
-        from {
-          transform: translateY(30px);
-          opacity: 0;
-        }
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-
-      @keyframes scaleIn {
-        from {
-          transform: scale(0);
-          opacity: 0;
-        }
-        to {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-
-      @keyframes checkDraw {
-        from {
-          stroke-dasharray: 0, 100;
-        }
-        to {
-          stroke-dasharray: 100, 100;
-        }
-      }
-
-      @keyframes slideInRight {
-        from {
-          transform: translateX(400px);
-          opacity: 0;
-        }
-        to {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-
       footer {
         padding: 40px 0;
         text-align: center;
@@ -470,7 +301,7 @@
         font-size: 0.9rem;
       }
 
-              @media (max-width: 768px) {
+      @media (max-width: 768px) {
         header h1 {
           font-size: 2rem;
         }
@@ -501,20 +332,6 @@
 
         .container {
           padding: 0 20px;
-        }
-
-        .modal-content {
-          padding: 30px 20px;
-        }
-
-        .modal-content h3 {
-          font-size: 1.5rem;
-        }
-
-        .alert-message {
-          right: 10px;
-          left: 10px;
-          max-width: none;
         }
       }
     </style>
@@ -616,53 +433,6 @@
 
         return (
           <>
-            {/* Alert Messages */}
-            {alertMessage && (
-              <div className={`alert-message ${alertMessage.type}`}>
-                <div className="alert-icon">
-                  {alertMessage.type === 'error' && (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#dc3545" strokeWidth="2">
-                      <circle cx="12" cy="12" r="10" />
-                      <line x1="15" y1="9" x2="9" y2="15" />
-                      <line x1="9" y1="9" x2="15" y2="15" />
-                    </svg>
-                  )}
-                  {alertMessage.type === 'warning' && (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#ffc107" strokeWidth="2">
-                      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                      <line x1="12" y1="9" x2="12" y2="13" />
-                      <line x1="12" y1="17" x2="12.01" y2="17" />
-                    </svg>
-                  )}
-                </div>
-                <div className="alert-text">{alertMessage.message}</div>
-              </div>
-            )}
-
-            {/* Success Modal */}
-            {showSuccessModal && (
-              <div className="modal-overlay" onClick={() => setShowSuccessModal(false)}>
-                <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                  <div className="success-icon">
-                    <svg viewBox="0 0 50 50">
-                      <path d="M 10 25 L 20 35 L 40 15" />
-                    </svg>
-                  </div>
-                  <h3>Message Sent Successfully! 🎉</h3>
-                  <p>
-                    Thank you for reaching out! Your message has been delivered to my inbox. 
-                    I'll get back to you as soon as possible, usually within 24 hours.
-                  </p>
-                  <button 
-                    className="modal-close-btn" 
-                    onClick={() => setShowSuccessModal(false)}
-                  >
-                    Got it, Thanks!
-                  </button>
-                </div>
-              </div>
-            )}
-
             <header>
               <div className="container">
                 <h1>Nurico Vicyyanto</h1>
