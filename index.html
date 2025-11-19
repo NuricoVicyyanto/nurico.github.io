@@ -1,516 +1,572 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="icon" type="image/x-icon" href="img/nv.png">
     <title>Nurico Vicyyanto - Full Stack Developer</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.8;
-            color: #2c2c2c;
-            background: #ffffff;
-        }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.8;
+        color: #2c2c2c;
+        background: #ffffff;
+      }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 30px;
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 30px;
+      }
+
+      header {
+        padding: 100px 0 80px;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      header h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #00594f;
+        letter-spacing: -1px;
+      }
+
+      header p {
+        font-size: 1.15rem;
+        color: #666;
+        margin-bottom: 40px;
+        line-height: 1.6;
+      }
+
+      .header-links {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .header-links a {
+        color: #00594f;
+        text-decoration: none;
+        font-weight: 500;
+        padding-bottom: 2px;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s;
+      }
+
+      .header-links a:hover {
+        border-bottom-color: #00594f;
+      }
+
+      section {
+        padding: 80px 0;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      section:last-of-type {
+        border-bottom: none;
+      }
+
+      section h2 {
+        font-size: 1.4rem;
+        margin-bottom: 40px;
+        font-weight: 600;
+        color: #00594f;
+        letter-spacing: -0.5px;
+      }
+
+      .section-content p {
+        margin-bottom: 20px;
+        color: #555;
+        font-size: 1.05rem;
+      }
+
+      .info-list {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 15px 30px;
+        margin-top: 30px;
+      }
+
+      .info-list dt {
+        font-weight: 500;
+        color: #00594f;
+      }
+
+      .info-list dd {
+        color: #555;
+      }
+
+      .skills-list {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 20px 30px;
+        margin-top: 20px;
+      }
+
+      .skills-list dt {
+        font-weight: 500;
+        color: #00594f;
+      }
+
+      .skills-list dd {
+        color: #555;
+      }
+
+      .project-item {
+        margin-bottom: 35px;
+        padding-bottom: 35px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .project-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .project-item h3 {
+        font-size: 1.15rem;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #2c2c2c;
+      }
+
+      .project-item p {
+        color: #666;
+        margin-bottom: 12px;
+      }
+
+      .project-item a {
+        color: #00594f;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      .project-item a:hover {
+        text-decoration: underline;
+      }
+
+      .experience-item {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .experience-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .experience-header {
+        margin-bottom: 15px;
+      }
+
+      .experience-item h3 {
+        font-size: 1.15rem;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #2c2c2c;
+      }
+
+      .experience-meta {
+        color: #00594f;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      .experience-company {
+        color: #888;
+        font-size: 0.95rem;
+      }
+
+      .experience-item ul {
+        list-style: none;
+        margin-top: 15px;
+      }
+
+      .experience-item li {
+        color: #666;
+        margin-bottom: 8px;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .experience-item li:before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: #00594f;
+      }
+
+      .more-info {
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 1px solid #f0f0f0;
+      }
+
+      .more-info p {
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      .more-info a {
+        color: #00594f;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .more-info a:hover {
+        text-decoration: underline;
+      }
+
+      .contact-form {
+        margin-top: 30px;
+      }
+
+      .form-group {
+        margin-bottom: 30px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 500;
+        color: #00594f;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 0;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        font-family: inherit;
+        font-size: 1rem;
+        color: #2c2c2c;
+        background: transparent;
+        transition: border-color 0.3s;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-bottom-color: #00594f;
+      }
+
+      .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .submit-btn {
+        padding: 14px 40px;
+        background: #00594f;
+        color: #fff;
+        border: none;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: opacity 0.3s;
+      }
+
+      .submit-btn:hover {
+        opacity: 0.9;
+      }
+
+      footer {
+        padding: 40px 0;
+        text-align: center;
+        color: #999;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2rem;
         }
 
         header {
-            padding: 100px 0 80px;
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #00594f;
-            letter-spacing: -1px;
-        }
-
-        header p {
-            font-size: 1.15rem;
-            color: #666;
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-
-        .header-links {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .header-links a {
-            color: #00594f;
-            text-decoration: none;
-            font-weight: 500;
-            padding-bottom: 2px;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.3s;
-        }
-
-        .header-links a:hover {
-            border-bottom-color: #00594f;
+          padding: 60px 0 50px;
         }
 
         section {
-            padding: 80px 0;
-            border-bottom: 1px solid #e5e5e5;
+          padding: 50px 0;
         }
 
-        section:last-of-type {
-            border-bottom: none;
-        }
-
-        section h2 {
-            font-size: 1.4rem;
-            margin-bottom: 40px;
-            font-weight: 600;
-            color: #00594f;
-            letter-spacing: -0.5px;
-        }
-
-        .section-content p {
-            margin-bottom: 20px;
-            color: #555;
-            font-size: 1.05rem;
-        }
-
-        .info-list {
-            display: grid;
-            grid-template-columns: 150px 1fr;
-            gap: 15px 30px;
-            margin-top: 30px;
-        }
-
-        .info-list dt {
-            font-weight: 500;
-            color: #00594f;
-        }
-
-        .info-list dd {
-            color: #555;
-        }
-
+        .info-list,
         .skills-list {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 20px 30px;
-            margin-top: 20px;
+          grid-template-columns: 1fr;
+          gap: 10px;
         }
 
+        .info-list dt,
         .skills-list dt {
-            font-weight: 500;
-            color: #00594f;
+          margin-top: 15px;
         }
 
-        .skills-list dd {
-            color: #555;
+        .info-list dt:first-child,
+        .skills-list dt:first-child {
+          margin-top: 0;
         }
 
-        .project-item {
-            margin-bottom: 35px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid #f0f0f0;
+        .container {
+          padding: 0 20px;
         }
-
-        .project-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .project-item h3 {
-            font-size: 1.15rem;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #2c2c2c;
-        }
-
-        .project-item p {
-            color: #666;
-            margin-bottom: 12px;
-        }
-
-        .project-item a {
-            color: #00594f;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        .project-item a:hover {
-            text-decoration: underline;
-        }
-
-        .experience-item {
-            margin-bottom: 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .experience-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .experience-header {
-            margin-bottom: 15px;
-        }
-
-        .experience-item h3 {
-            font-size: 1.15rem;
-            margin-bottom: 5px;
-            font-weight: 600;
-            color: #2c2c2c;
-        }
-
-        .experience-meta {
-            color: #00594f;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        .experience-company {
-            color: #888;
-            font-size: 0.95rem;
-        }
-
-        .experience-item ul {
-            list-style: none;
-            margin-top: 15px;
-        }
-
-        .experience-item li {
-            color: #666;
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .experience-item li:before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: #00594f;
-        }
-
-        .more-info {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid #f0f0f0;
-        }
-
-        .more-info p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .more-info a {
-            color: #00594f;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .more-info a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-form {
-            margin-top: 30px;
-        }
-
-        .form-group {
-            margin-bottom: 30px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 500;
-            color: #00594f;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 0;
-            border: none;
-            border-bottom: 1px solid #ddd;
-            font-family: inherit;
-            font-size: 1rem;
-            color: #2c2c2c;
-            background: transparent;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-bottom-color: #00594f;
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            padding: 14px 40px;
-            background: #00594f;
-            color: #fff;
-            border: none;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
-
-        .submit-btn:hover {
-            opacity: 0.9;
-        }
-
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            color: #999;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            header {
-                padding: 60px 0 50px;
-            }
-
-            section {
-                padding: 50px 0;
-            }
-
-            .info-list,
-            .skills-list {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .info-list dt,
-            .skills-list dt {
-                margin-top: 15px;
-            }
-
-            .info-list dt:first-child,
-            .skills-list dt:first-child {
-                margin-top: 0;
-            }
-
-            .container {
-                padding: 0 20px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <h1>Nurico Vicyyanto</h1>
-            <p>Full Stack Developer specializing in Web & Mobile Application Development, AI Development, Project Management, and Technical Writing</p>
-            <div class="header-links">
-                <a href="#contact">Contact</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-            </div>
+      <div class="container">
+        <h1>Nurico Vicyyanto</h1>
+        <p>
+          Full Stack Developer specializing in Web & Mobile Application
+          Development, AI Development, Project Management, and Technical Writing
+        </p>
+        <div class="header-links">
+          <a href="#contact">Contact</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
         </div>
+      </div>
     </header>
 
     <section id="about">
-        <div class="container">
-            <h2>About</h2>
-            <div class="section-content">
-                <p>I am an experienced software developer with a passion for creating innovative technological solutions. With over 5 years of experience, I have helped various companies develop high-quality applications.</p>
-                <p>I believe in writing clean, efficient, and maintainable code. Always enthusiastic about learning new technologies and tackling complex development challenges.</p>
-            </div>
-            <dl class="info-list">
-                <dt>Name</dt>
-                <dd>Nurico Vicyyanto</dd>
-                <dt>Location</dt>
-                <dd>Bali, Indonesia</dd>
-                <dt>Email</dt>
-                <dd>nuricov.dev@gmail.com</dd>
-                <dt>Languages</dt>
-                <dd>Indonesian, English</dd>
-            </dl>
+      <div class="container">
+        <h2>About</h2>
+        <div class="section-content">
+          <p>
+            I am an experienced software developer with a passion for creating
+            innovative technological solutions. With over 5 years of experience,
+            I have helped various companies develop high-quality applications.
+          </p>
+          <p>
+            I believe in writing clean, efficient, and maintainable code. Always
+            enthusiastic about learning new technologies and tackling complex
+            development challenges.
+          </p>
         </div>
+        <dl class="info-list">
+          <dt>Name</dt>
+          <dd>Nurico Vicyyanto</dd>
+          <dt>Location</dt>
+          <dd>Bali, Indonesia</dd>
+          <dt>Email</dt>
+          <dd>nuricov.dev@gmail.com</dd>
+          <dt>Languages</dt>
+          <dd>Indonesian, English</dd>
+        </dl>
+      </div>
     </section>
 
     <section id="skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <dl class="skills-list">
-                <dt>Backend</dt>
-                <dd>Python, Django, Flask, FastAPI, PHP, Laravel, Javascript</dd>
-                <dt>Frontend</dt>
-                <dd>React, Vue.js, Tailwind CSS</dd>
-                <dt>Database & Cloud</dt>
-                <dd>PostgreSQL, MongoDB, AWS, Docker</dd>
-            </dl>
-        </div>
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <dl class="skills-list">
+          <dt>Backend</dt>
+          <dd>Python, Django, Flask, FastAPI, PHP, Laravel, Javascript</dd>
+          <dt>Frontend</dt>
+          <dd>React, Vue.js, Tailwind CSS</dd>
+          <dt>Database & Cloud</dt>
+          <dd>PostgreSQL, MongoDB, AWS, Docker</dd>
+        </dl>
+      </div>
     </section>
 
     <section id="projects">
-        <div class="container">
-            <h2>Recent Projects</h2>
-            
-            <div class="project-item">
-                <h3>sewamobilmurah.com</h3>
-                <p>A car rental application providing an easy and affordable experience.</p>
-                <a href="https://sewamobilmurah.com/">View Demo →</a>
-            </div>
+      <div class="container">
+        <h2>Recent Projects</h2>
 
-            <div class="project-item">
-                <h3>VHub</h3>
-                <p>An open-source web platform for sharing and managing datasets efficiently.</p>
-                <a href="https://github.com/NuricoVicyyanto/vhub-laravel">View Source →</a>
-            </div>
-
-            <div class="project-item">
-                <h3>GoCar Driver Registration</h3>
-                <p>A landing page for driver registration, built for GoCar Jayamahe.</p>
-                <a href="https://gocar.jayamaheeasyride.com/">View Demo →</a>
-            </div>
-
-            <div class="project-item">
-                <h3>Jayamahe EasyRide</h3>
-                <p>A car rental application providing an easy and affordable experience.</p>
-                <a href="https://www.jayamaheeasyride.com/">View Demo →</a>
-            </div>
-
-            <div class="project-item">
-                <h3>sewamobilmurah.com Mobile App</h3>
-                <p>App for sewamobilmurah.com, providing an easy and affordable experience.</p>
-                <a href="https://play.google.com/store/apps/details?id=com.sewamobilmurah&pcampaignid=web_share">View Demo →</a>
-            </div>
-
-            <div class="project-item">
-                <h3>Driver App Jayamahe</h3>
-                <p>Schedule and manage your trips with the Jayamahe Driver App.</p>
-                <a href="https://play.google.com/store/apps/details?id=com.sewamobilmurah.driver&pcampaignid=web_share">View Demo →</a>
-            </div>
-
-            <div class="more-info">
-                <p>Visit my <a href="https://github.com/nuricovicyyanto">GitHub profile</a> for more projects</p>
-            </div>
+        <div class="project-item">
+          <h3>sewamobilmurah.com</h3>
+          <p>
+            A car rental application providing an easy and affordable
+            experience.
+          </p>
+          <a href="https://sewamobilmurah.com/">View Demo →</a>
         </div>
+
+        <div class="project-item">
+          <h3>VHub</h3>
+          <p>
+            An open-source web platform for sharing and managing datasets
+            efficiently.
+          </p>
+          <a href="https://github.com/NuricoVicyyanto/vhub-laravel"
+            >View Source →</a
+          >
+        </div>
+
+        <div class="project-item">
+          <h3>GoCar Driver Registration</h3>
+          <p>
+            A landing page for driver registration, built for GoCar Jayamahe.
+          </p>
+          <a href="https://gocar.jayamaheeasyride.com/">View Demo →</a>
+        </div>
+
+        <div class="project-item">
+          <h3>Jayamahe EasyRide</h3>
+          <p>
+            A car rental application providing an easy and affordable
+            experience.
+          </p>
+          <a href="https://www.jayamaheeasyride.com/">View Demo →</a>
+        </div>
+
+        <div class="project-item">
+          <h3>sewamobilmurah.com Mobile App</h3>
+          <p>
+            App for sewamobilmurah.com, providing an easy and affordable
+            experience.
+          </p>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.sewamobilmurah&pcampaignid=web_share"
+            >View Demo →</a
+          >
+        </div>
+
+        <div class="project-item">
+          <h3>Driver App Jayamahe</h3>
+          <p>Schedule and manage your trips with the Jayamahe Driver App.</p>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.sewamobilmurah.driver&pcampaignid=web_share"
+            >View Demo →</a
+          >
+        </div>
+
+        <div class="more-info">
+          <p>
+            Visit my
+            <a href="https://github.com/nuricovicyyanto">GitHub profile</a> for
+            more projects
+          </p>
+        </div>
+      </div>
     </section>
 
     <section id="experience">
-        <div class="container">
-            <h2>Work Experience</h2>
-            
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3>IT Lead</h3>
-                    <div class="experience-meta">2023 - Present</div>
-                    <div class="experience-company">PT Dwi Sarana Mesari</div>
-                </div>
-                <ul>
-                    <li>Leading software development teams</li>
-                    <li>Managing application maintenance and infrastructure</li>
-                    <li>Designing systems architecture from scratch</li>
-                </ul>
-            </div>
+      <div class="container">
+        <h2>Work Experience</h2>
 
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3>Web Developer</h3>
-                    <div class="experience-meta">2023</div>
-                    <div class="experience-company">PT Dwi Sarana Mesari</div>
-                </div>
-                <ul>
-                    <li>Developing web applications using PHP, Laravel, React, and other modern technologies</li>
-                    <li>Collaborating with designers and developers to create high-quality products</li>
-                    <li>Implementing and maintaining new features and functionality</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3>Freelance Programmer</h3>
-                    <div class="experience-meta">2020 - Present</div>
-                    <div class="experience-company">Freelance</div>
-                </div>
-                <ul>
-                    <li>Providing software development services for various clients</li>
-                    <li>Specializing in web and mobile applications</li>
-                    <li>Helping businesses automate processes and improve efficiency through custom solutions</li>
-                </ul>
-            </div>
-
-            <div class="more-info">
-                <p>Visit my <a href="https://linkedin.com/in/nurico-vicyyanto">LinkedIn profile</a> for certifications and work experience</p>
-            </div>
+        <div class="experience-item">
+          <div class="experience-header">
+            <h3>IT Lead</h3>
+            <div class="experience-meta">2023 - Present</div>
+            <div class="experience-company">PT Dwi Sarana Mesari</div>
+          </div>
+          <ul>
+            <li>Leading software development teams</li>
+            <li>Managing application maintenance and infrastructure</li>
+            <li>Designing systems architecture from scratch</li>
+          </ul>
         </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <h3>Web Developer</h3>
+            <div class="experience-meta">2023</div>
+            <div class="experience-company">PT Dwi Sarana Mesari</div>
+          </div>
+          <ul>
+            <li>
+              Developing web applications using PHP, Laravel, React, and other
+              modern technologies
+            </li>
+            <li>
+              Collaborating with designers and developers to create high-quality
+              products
+            </li>
+            <li>Implementing and maintaining new features and functionality</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <h3>Freelance Programmer</h3>
+            <div class="experience-meta">2020 - Present</div>
+            <div class="experience-company">Freelance</div>
+          </div>
+          <ul>
+            <li>Providing software development services for various clients</li>
+            <li>Specializing in web and mobile applications</li>
+            <li>
+              Helping businesses automate processes and improve efficiency
+              through custom solutions
+            </li>
+          </ul>
+        </div>
+
+        <div class="more-info">
+          <p>
+            Visit my
+            <a href="https://linkedin.com/in/nurico-vicyyanto"
+              >LinkedIn profile</a
+            >
+            for certifications and work experience
+          </p>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <form class="contact-form" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
+      <div class="container">
+        <h2>Contact</h2>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>© 2025 Nuricov. All Rights Reserved.</p>
-        </div>
+      <div class="container">
+        <p>© 2025 Nuricov. All Rights Reserved.</p>
+      </div>
     </footer>
 
     <script>
-        function handleSubmit(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            e.target.reset();
-        }
+      function handleSubmit(e) {
+        e.preventDefault();
+        alert("Thank you for your message! I will get back to you soon.");
+        e.target.reset();
+      }
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
             });
+          }
         });
+      });
     </script>
-</body>
+  </body>
 </html>
